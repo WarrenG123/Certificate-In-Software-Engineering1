@@ -11,6 +11,7 @@ const validate = (event) => {
     let zip = document.getElementById("zip");
     let phone1 = document.getElementById("phone1");
     let phone2 = document.getElementById("phone2");
+    let email = document.getElementById("email");
     
     //error
     let firstErr = document.getElementById("fNameErr")
@@ -23,6 +24,7 @@ const validate = (event) => {
     let zipError = document.getElementById("zipErr");
     let ph1Error = document.getElementById("phone1Err");
     let ph2Error = document.getElementById("phone2Err");
+    let emailError = document.getElementById("emailErr");
 
 
 
@@ -71,6 +73,9 @@ const validate = (event) => {
         birthError.textContent = "Select your date of birth";
         birthError.style = "color: red";
         error++;
+    }else {
+        birth.style.border = "1px solid green";
+        birthError.textContent = "";
     }
     //gender
     if (!gender.value) {
@@ -155,11 +160,28 @@ if (!phone2.value) {
     phone2.style.border = "1px solid green";
   ph2Error.textContent = "";
 }
+//email
+const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-
+if (!email.value) {
+    email.style.border = "1px solid red";
+    emailError.textContent = "Enter your email";
+    emailError.style = "color: red";
+    error++;
+} else if (!email.value.match(emailregex)) {
+    email.style.border = "1px solid red";
+    emailError.innerHTML =
+        "Enter a valid email";
+        emailError.style = "color: red";
+    error++;
+}else {
+    email.style.border = "1px solid green";
+    emailError.textContent = "";
+}
 
 
     if (error > 0) {
         event.preventDefault();
     }
 }
+
