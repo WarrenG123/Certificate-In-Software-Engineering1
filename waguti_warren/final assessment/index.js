@@ -8,6 +8,8 @@ const bodyParser = require("body-parser");
 
 
 
+//
+const registerRoute = require("./routes/registerRoute"); 
 
 
 
@@ -51,12 +53,16 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 
+app.use(registerRoute); 
 
 
 
 
 
 
+app.get("*", (req, res) => {
+    res.status(404).send("page does not exist");
+})
 
 
 
