@@ -9,6 +9,8 @@ const validate = (event) => {
     let district = document.getElementById("district");
     let town = document.getElementById("town");
     let zip = document.getElementById("zip");
+    let phone1 = document.getElementById("phone1");
+    let phone2 = document.getElementById("phone2");
     
     //error
     let firstErr = document.getElementById("fNameErr")
@@ -19,6 +21,8 @@ const validate = (event) => {
     let distError = document.getElementById("distrErr");
     let townError = document.getElementById("townErr");
     let zipError = document.getElementById("zipErr");
+    let ph1Error = document.getElementById("phone1Err");
+    let ph2Error = document.getElementById("phone2Err");
 
 
 
@@ -109,16 +113,48 @@ const validate = (event) => {
         townError.textContent = "";
     }
     //zip
-    // if (!gender.value) {
-    //     gender.style.border = "1px solid red";
-    //     genderError.textContent = "Select your gender";
-    //     genderError.style = "color: red";
-    //     error++
-    // } else {
-    //     gender.style.border = "1px solid green";
-    //     genderError.textContent = "";
-    // }
-
+    if (!zip.value) {
+       zip.style.border = "1px solid red";
+        zipError.textContent = "Zip Code";
+        zipError.style = "color: red";
+        error++
+    } else {
+        zip.style.border = "1px solid green";
+       zipError.textContent = "";
+    }
+//phone1
+const phoneNumberregex = /^\+256\d{9}$/;
+if (!phone1.value) {
+    phone1.style.border = "1px solid red";
+    ph1Error.innerHTML = "Phone Number 1";
+     ph1Error.style = "color: red";
+    error++;
+} else if (!phone1.value.match(phoneNumberregex)) {
+    phone1.style.border = "1px solid red";
+    ph1Error.innerHTML =
+        "phone number should be in this format +2567********";
+    ph1Error.style = "color: red";
+    error++;
+} else {
+    phone1.style.border = "1px solid green";
+   ph1Error.textContent = "";
+}
+//phone2
+if (!phone2.value) {
+   phone2.style.border = "1px solid red";
+     ph2Error.innerHTML = "Phone Number 2";
+     ph2Error.style = "color: red";
+    error++;
+} else if (!phone2.value.match(phoneNumberregex)) {
+   phone2.style.border = "1px solid red";
+     ph2Error.innerHTML =
+        "phone number should be in this format +2567********";
+     ph2Error.style = "color: red";
+    error++;
+} else {
+    phone2.style.border = "1px solid green";
+  ph2Error.textContent = "";
+}
 
 
 
