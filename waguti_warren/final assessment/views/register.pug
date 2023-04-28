@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  title GENQ REGISTRATION FORM
+style.
+  .row{
+  margin-bottom: 10px;
+  }
+  .button .btn-primary {
+  background-color: orangered;
+  border-color: orangered;
+  }
+  .button{
+  text-align: center;
+  }
+  .head{
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  }
+.container-fluid
+  .row.justify-content-center
+    .col-6
+      form(action='#' onsubmit='return validate (event)' method='post')
+        .head
+          h1
+            header GENQ KYC FORM
+        fieldset
+          legend Bio Data
+          .form-group
+            .row
+              .col
+                input#fName.form-control(type='text' name='firstname' aria-label='first name' placeholder='first name')
+                small#fNameErr
+              .col
+                input#lName.form-control(type='text' name='lastname' aria-label='Last name' placeholder='Last name')
+                small#lNameErr
+          .form-group
+            .row
+              .col
+                input#dob.form-control(type='date' name='dob' aria-label='Date of birth' placeholder='Date of birth')
+                small#dobErr
+              .col
+                select#gender.form-control(name='gender' aria-label='Gender' placeholder='Gender')
+                  option(value='') (Select Gender)
+                  option(value='male') Male
+                  option(value='female') Female
+                small#genErr
+        fieldset
+          legend location
+          .form-group
+            .row
+              .col
+                select#country.form-control(name='country' aria-label='Country' placeholder='Country')
+                  option(value='') (Country)
+                  option(value='Uganda') Uganda
+                  option(value='Kenya') Kenya
+                  option(value='Tanzania') Tanzania
+                  option(value='Rwanda') Rwanda
+                  option(value='DRC') DRC
+                  option(value='Burundi') Burundi
+                small#countErr
+              .col
+                input#district.form-control(type='text' name='district' aria-label='State/District' placeholder='State/District')
+                small#distrErr
+          .form-group
+            .row
+              .col
+                input#town.form-control(type='text' name='town' aria-label='Town' placeholder='Town')
+                small#townErr
+              .col
+                input#zip.form-control(type='text' name='zip' aria-label='Zip Code' placeholder='Zip Code')
+                small#zipErr
+        fieldset
+          legend Contact and Address
+          .form-group
+            .row
+              .col
+                input#phone1.form-control(type='text' name='phone1' aria-label='Phone Number 1' placeholder='Phone Number1')
+                small#phone1Err
+              .col
+                input#phone2.form-control(type='text' name='phone2' aria-label='Phone Number 2' placeholder='Phone Number 2')
+                small#phone2Err
+          .form-group
+            .row
+              .col
+                input#email.form-control(type='email' name='email' aria-label='Email' placeholder='Email')
+                small#emailErr
+        .button
+          button#submit.btn.btn-primary Submit
+script(src='/validate.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')

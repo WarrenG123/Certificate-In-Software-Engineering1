@@ -8,7 +8,7 @@ const validate = (event) => {
     let country = document.getElementById("country");
     let district = document.getElementById("district");
     let town = document.getElementById("town");
-
+    let zip = document.getElementById("zip");
     
     //error
     let firstErr = document.getElementById("fNameErr")
@@ -18,6 +18,7 @@ const validate = (event) => {
     let countError = document.getElementById("countErr");
     let distError = document.getElementById("distrErr");
     let townError = document.getElementById("townErr");
+    let zipError = document.getElementById("zipErr");
 
 
 
@@ -107,7 +108,7 @@ const validate = (event) => {
         town.style.border = "1px solid green";
         townError.textContent = "";
     }
-    // //gender
+    //zip
     // if (!gender.value) {
     //     gender.style.border = "1px solid red";
     //     genderError.textContent = "Select your gender";
