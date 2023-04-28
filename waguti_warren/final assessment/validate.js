@@ -4,13 +4,13 @@ const validate = (event) => {
     let first = document.getElementById("fName");
     let last = document.getElementById("lName");
     let birth = document.getElementById("dob");
-    // let gender = document.getElementById("gender");
-    le
+    let gender = document.getElementById("gender");
+    
     //error
     let firstErr = document.getElementById("fNameErr")
     let lastErr = document.getElementById("lNameErr");
     let birthError = document.getElementById("dobErr");
-    // let genderError = document.getElementById("genErr");
+    let genderError = document.getElementById("genErr");
 
 
 
@@ -61,15 +61,15 @@ const validate = (event) => {
         error++;
     }
     //gender
-    // if (!gender.value) {
-    //     gender.style.border = "1px solid red";
-    //     genderError.textContent = "Select the gender you belong to";
-    //     genderError.style = "color: red";
-    //     error++
-    // } else {
-    //     gender.style.border = "1px solid green";
-    //     genderError.textContent = "";
-    // }
+    if (!gender.value) {
+        gender.style.border = "1px solid red";
+        genderError.textContent = "Select your gender";
+        genderError.style = "color: red";
+        error++
+    } else {
+        gender.style.border = "1px solid green";
+        genderError.textContent = "";
+    }
 
 
 

@@ -10,23 +10,38 @@
     <title>GENQ REGISTRATION FORM</title>
 </head>
 <style>
-    .row{
+    .row {
         margin-bottom: 10px;
     }
+
     .button .btn-primary {
         background-color: orangered;
         border-color: orangered;
     }
-    .button{
+
+    .button {
         text-align: center;
 
     }
+
+    .head {
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+    }
 </style>
+
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
                 <form action="#" onsubmit="return validate (event)" method="post">
+                    <div class="head">
+                        <h1>
+                            <header>GENQ KYC FORM</header>
+                        </h1>
+                    </div>
                     <fieldset>
                         <legend>Bio Data</legend>
                         <div class="form-group">
@@ -48,16 +63,15 @@
                                 <div class="col">
                                     <input type="date" class="form-control" name="dob" id="dob"
                                         aria-label="Date of birth" placeholder="Date of birth">
-                                    <small id="dobErr"></small>  
+                                    <small id="dobErr"></small>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" name="gender" id="gender"
-                                        aria-label="Gender" placeholder="Gender">
-                                        <select class="form-control" id="gender" name="gender"  aria-label="Gender" placeholder="Gender" >
-                                            <option value="">(Select Gender)</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                          </select>
+                                    <select class="form-control" id="gender" name="gender" aria-label="Gender"
+                                        placeholder="Gender">
+                                        <option value="">(Select Gender)</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
                                     <small id="genErr"></small>
                                 </div>
                             </div>
@@ -68,7 +82,8 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <select class="form-control" id="country" name="country"  aria-label="Country" placeholder="Country" >
+                                    <select class="form-control" id="country" name="country" aria-label="Country"
+                                        placeholder="Country">
                                         <option value="">(Country)</option>
                                         <option value="Uganda">Uganda</option>
                                         <option value="Kenya">Kenya</option>
@@ -76,12 +91,12 @@
                                         <option value="Rwanda">Rwanda</option>
                                         <option value="DRC">DRC</option>
                                         <option value="Burundi">Burundi</option>
-                                      </select>
-                                      <small id="countErr"></small>
+                                    </select>
+                                    <small id="countErr"></small>
                                 </div>
                                 <div class="col">
                                     <input type="text" class="form-control" name="district" id="district"
-                                    aria-label="State/District" placeholder="State/District">
+                                        aria-label="State/District" placeholder="State/District">
                                     <small id="distrErr"></small>
                                 </div>
                             </div>
@@ -89,13 +104,13 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="town" id="town"
-                                    aria-label="Town" placeholder="Town">
+                                    <input type="text" class="form-control" name="town" id="town" aria-label="Town"
+                                        placeholder="Town">
                                     <small id="townErr"></small>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" name="zip" id="zip"
-                                    aria-label="Zip Code" placeholder="Zip Code">
+                                    <input type="text" class="form-control" name="zip" id="zip" aria-label="Zip Code"
+                                        placeholder="Zip Code">
                                     <small id="zipErr"></small>
                                 </div>
                             </div>
@@ -107,12 +122,12 @@
                             <div class="row">
                                 <div class="col">
                                     <input type="text" class="form-control" name="phone1" id="phone1"
-                                    aria-label="Phone Number 1" placeholder="Phone Number1">
+                                        aria-label="Phone Number 1" placeholder="Phone Number1">
                                     <small id="phone1Err"></small>
                                 </div>
                                 <div class="col">
                                     <input type="text" class="form-control" name="phone2" id="phone2"
-                                    aria-label="Phone Number 2" placeholder="Phone Number 2">
+                                        aria-label="Phone Number 2" placeholder="Phone Number 2">
                                     <small id="phone2Err"></small>
                                 </div>
                             </div>
@@ -120,8 +135,8 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                    aria-label="Email" placeholder="Email">
+                                    <input type="email" class="form-control" name="email" id="email" aria-label="Email"
+                                        placeholder="Email">
                                     <small id="emailErr"></small>
                                 </div>
                             </div>
@@ -129,7 +144,7 @@
                     </fieldset>
                     <div class="button">
                         <button id="submit" class="btn btn-primary">Submit</button>
-                      </div>
+                    </div>
                 </form>
             </div>
         </div>
