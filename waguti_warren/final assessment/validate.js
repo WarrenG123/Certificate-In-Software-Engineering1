@@ -5,18 +5,25 @@ const validate = (event) => {
     let last = document.getElementById("lName");
     let birth = document.getElementById("dob");
     let gender = document.getElementById("gender");
+    let country = document.getElementById("country");
+    let district = document.getElementById("district");
+    let town = document.getElementById("town");
+
     
     //error
     let firstErr = document.getElementById("fNameErr")
     let lastErr = document.getElementById("lNameErr");
     let birthError = document.getElementById("dobErr");
     let genderError = document.getElementById("genErr");
+    let countError = document.getElementById("countErr");
+    let distError = document.getElementById("distrErr");
+    let townError = document.getElementById("townErr");
 
 
 
     if (!first.value) {
         first.style.border = "1px solid red";
-        firstErr.textContent = "Please enter first name";
+        firstErr.textContent = "Enter your first name";
         firstErr.style = "color: red";
         error++;
     } else if (first.value.length < 2) {
@@ -36,7 +43,7 @@ const validate = (event) => {
     //last
     if (!last.value) {
         last.style.border = "1px solid red";
-        lastErr.textContent = "Please enter last name";
+        lastErr.textContent = "Enter your last name";
         lastErr.style = "color: red";
         error++;
     } else if (last.value.length < 2) {
@@ -56,7 +63,7 @@ const validate = (event) => {
      // DOB
      if (!birth.value) {
         birth.style.border = "1px solid red";
-        birthError.textContent = "Please fill in this field";
+        birthError.textContent = "Select your date of birth";
         birthError.style = "color: red";
         error++;
     }
@@ -70,6 +77,46 @@ const validate = (event) => {
         gender.style.border = "1px solid green";
         genderError.textContent = "";
     }
+    //country
+    if (!country.value) {
+        country.style.border = "1px solid red";
+        countError.textContent = "Select your Country of Residence";
+        countError.style = "color: red";
+        error++
+    } else {
+        country.style.border = "1px solid green";
+        countError.textContent = "";
+    }
+    //district
+    if (!district.value) {
+        district.style.border = "1px solid red";
+        distError.textContent = "Enter your District/State here";
+        distError.style = "color: red";
+        error++
+    } else {
+        district.style.border = "1px solid green";
+        distError.textContent = "";
+    }
+    //town
+    if (!town.value) {
+        town.style.border = "1px solid red";
+        townError.textContent = "Enter your town here";
+        townError.style = "color: red";
+        error++
+    } else {
+        town.style.border = "1px solid green";
+        townError.textContent = "";
+    }
+    // //gender
+    // if (!gender.value) {
+    //     gender.style.border = "1px solid red";
+    //     genderError.textContent = "Select your gender";
+    //     genderError.style = "color: red";
+    //     error++
+    // } else {
+    //     gender.style.border = "1px solid green";
+    //     genderError.textContent = "";
+    // }
 
 
 
